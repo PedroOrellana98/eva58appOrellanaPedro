@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listar Locales</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let local of locales | async">
+    <ion-item (click)="editar(local)">
+      <ion-label>
+        <h2>{{ local.ciudad }}</h2>
+        <h2>{{ local.direccion }}</h2>
+        <h2>{{ local.precio }}</h2>
+        <h2>{{ local.telefono }}</h2>
+      </ion-label>
+    </ion-item>
+  </div>
+    
+  <app-demo icon="alarm-outline" (updateData)="update($event)"></app-demo>
+
+</ion-content>

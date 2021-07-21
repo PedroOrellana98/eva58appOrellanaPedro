@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Locales</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-img style="align-items: center" src="https://www.solvetic.com/uploads/tutorials/monthly_04_2017/6e0fa06f5ebfcfb59cfd46548c153b38.png"></ion-img>
+
+  <!-- Item as a Button -->
+  <ion-item>
+    <ion-label position="stacked">CIUDAD:</ion-label>
+    <ion-input id="inputCiudad" [(ngModel)]="local.ciudad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">DIRECCION:</ion-label>
+    <ion-input id="inputDireccion" [(ngModel)]="local.direccion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">PRECION:</ion-label>
+    <ion-input id="inputPrecio" [(ngModel)]="local.precio"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">TELEFONO:</ion-label>
+    <ion-input id="inputTelefono" [(ngModel)]="local.telefono"></ion-input>
+  </ion-item>
+
+  <ion-row style="margin-top: 10px;"class="ion-justify-content-center">
+      <div>
+        <ion-button id="botonEnviar" color="primary" shape="round" fill="outline"(click)="guardar()">Enviar</ion-button>
+      </div>
+  </ion-row>
+
+  <app-demo></app-demo>
+
+</ion-content>
